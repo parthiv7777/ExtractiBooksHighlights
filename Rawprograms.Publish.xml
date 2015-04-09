@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\Users\parthidj\Desktop\IBOOK\Built" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Web.config" publishTime="02/14/2012 14:51:58" />
+    <file relUrl="Scripts/jquery-1.6.4-vsdoc.js" publishTime="02/14/2012 15:32:20" />
+    <file relUrl="Scripts/jquery.mobile-1.0.1.min.js" publishTime="02/14/2012 15:32:21" />
+    <file relUrl="Content/images/icons-18-white.png" publishTime="02/14/2012 15:32:21" />
+    <file relUrl="bin/Raw programs.pdb" publishTime="02/17/2012 14:43:25" />
+    <file relUrl="Content/jquery.mobile-1.0.1.min.css" publishTime="02/14/2012 15:32:21" />
+    <file relUrl="packages.config" publishTime="02/14/2012 15:32:22" />
+    <file relUrl="Scripts/jquery-1.6.4.js" publishTime="02/14/2012 15:32:20" />
+    <file relUrl="Content/jquery.mobile.structure-1.0.1.css" publishTime="02/14/2012 15:32:21" />
+    <file relUrl="Content/images/icons-36-black.png" publishTime="02/14/2012 15:32:21" />
+    <file relUrl="bin/Raw programs.dll" publishTime="02/17/2012 14:43:25" />
+    <file relUrl="Scripts/jquery.mobile-1.0.1.js" publishTime="02/14/2012 15:32:21" />
+    <file relUrl="Content/jquery.mobile.structure-1.0.1.min.css" publishTime="02/14/2012 15:32:21" />
+    <file relUrl="Scripts/jquery-1.4.1.js" publishTime="05/12/2011 14:34:05" />
+    <file relUrl="Content/images/icons-18-black.png" publishTime="02/14/2012 15:32:22" />
+    <file relUrl="Content/images/ajax-loader.png" publishTime="02/14/2012 15:32:22" />
+    <file relUrl="Content/jquery.mobile-1.0.1.css" publishTime="02/14/2012 15:32:21" />
+    <file relUrl="Scripts/jquery-1.6.4.min.js" publishTime="02/14/2012 15:32:20" />
+    <file relUrl="HighligtsAll.aspx" publishTime="02/04/2012 23:01:43" />
+    <file relUrl="Scripts/jquery-1.4.1-vsdoc.js" publishTime="05/12/2011 14:34:05" />
+    <file relUrl="Content/images/icons-36-white.png" publishTime="02/14/2012 15:32:21" />
+    <file relUrl="Scripts/jquery-1.4.1.min.js" publishTime="05/12/2011 14:34:05" />
+    <file relUrl="index.aspx" publishTime="02/04/2012 23:45:54" />
+    <file relUrl="bin/System.Data.SQLite.DLL" publishTime="04/18/2010 12:34:12" />
+  </publishProfile>
+</publishData>

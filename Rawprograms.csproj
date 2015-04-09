@@ -1,0 +1,712 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1E3A301A-36D7-4371-B0CE-9AB31E78FE9D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Raw_programs</RootNamespace>
+    <AssemblyName>Raw programs</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetEpub, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\DotNetEpub.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\..\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <HintPath>..\..\DbLinq-0.20.1\System.Data.SQLite.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\images\ajax-loader.png" />
+    <Content Include="Content\images\icons-18-black.png" />
+    <Content Include="Content\images\icons-18-white.png" />
+    <Content Include="Content\images\icons-36-black.png" />
+    <Content Include="Content\images\icons-36-white.png" />
+    <Content Include="Content\jquery.mobile-1.0.1.css" />
+    <Content Include="Content\jquery.mobile-1.0.1.min.css" />
+    <Content Include="Content\jquery.mobile.structure-1.0.1.css" />
+    <Content Include="Content\jquery.mobile.structure-1.0.1.min.css" />
+    <Content Include="epub_create\calibre-complete.exe" />
+    <Content Include="epub_create\calibre-customize.exe" />
+    <Content Include="epub_create\calibre-debug.exe" />
+    <Content Include="epub_create\calibre-launcher.dll" />
+    <Content Include="epub_create\calibre-parallel.exe" />
+    <Content Include="epub_create\calibre-server.exe" />
+    <Content Include="epub_create\calibre-smtp.exe" />
+    <Content Include="epub_create\calibre.exe" />
+    <Content Include="epub_create\calibredb.exe" />
+    <Content Include="epub_create\DLLs\coder.xml" />
+    <Content Include="epub_create\DLLs\colors.xml" />
+    <Content Include="epub_create\DLLs\configure.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="epub_create\DLLs\CORE_RL_bzlib_.dll" />
+    <Content Include="epub_create\DLLs\CORE_RL_jbig_.dll" />
+    <Content Include="epub_create\DLLs\CORE_RL_jp2_.dll" />
+    <Content Include="epub_create\DLLs\CORE_RL_jpeg_.dll" />
+    <Content Include="epub_create\DLLs\CORE_RL_lcms_.dll" />
+    <Content Include="epub_create\DLLs\CORE_RL_libxml_.dll" />
+    <Content Include="epub_create\DLLs\CORE_RL_magick_.dll" />
+    <Content Include="epub_create\DLLs\CORE_RL_png_.dll" />
+    <Content Include="epub_create\DLLs\CORE_RL_tiff_.dll" />
+    <Content Include="epub_create\DLLs\CORE_RL_ttf_.dll" />
+    <Content Include="epub_create\DLLs\CORE_RL_wand_.dll" />
+    <Content Include="epub_create\DLLs\CORE_RL_zlib_.dll" />
+    <Content Include="epub_create\DLLs\delegates.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="epub_create\DLLs\english.xml" />
+    <Content Include="epub_create\DLLs\fontconfig.dll" />
+    <Content Include="epub_create\DLLs\freetype.dll" />
+    <Content Include="epub_create\DLLs\icudt44.dll" />
+    <Content Include="epub_create\DLLs\icuin44.dll" />
+    <Content Include="epub_create\DLLs\icuio44.dll" />
+    <Content Include="epub_create\DLLs\icule44.dll" />
+    <Content Include="epub_create\DLLs\iculx44.dll" />
+    <Content Include="epub_create\DLLs\icutu44.dll" />
+    <Content Include="epub_create\DLLs\icuuc44.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_art_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_avs_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_bgr_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_bmp_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_braille_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_cals_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_caption_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_cin_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_cip_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_clipboard_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_clip_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_cmyk_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_cut_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_dcm_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_dds_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_debug_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_dib_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_djvu_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_dng_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_dot_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_dps_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_dpx_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_emf_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_ept_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_exr_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_fax_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_fits_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_fpx_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_gif_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_gradient_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_gray_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_hald_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_histogram_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_hrz_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_html_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_icon_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_info_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_inline_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_ipl_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_jbig_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_jp2_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_jpeg_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_label_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_mac_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_magick_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_map_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_matte_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_mat_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_meta_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_miff_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_mono_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_mpc_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_mpeg_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_mpr_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_msl_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_mtv_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_mvg_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_null_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_otb_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_palm_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_pattern_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_pcd_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_pcl_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_pcx_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_pdb_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_pdf_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_pes_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_pict_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_pix_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_plasma_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_png_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_pnm_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_preview_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_ps2_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_ps3_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_psd_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_ps_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_pwp_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_raw_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_rgb_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_rla_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_rle_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_scr_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_sct_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_sfw_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_sgi_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_stegano_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_sun_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_svg_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_tga_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_thumbnail_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_tiff_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_tile_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_tim_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_ttf_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_txt_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_uil_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_url_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_uyvy_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_vicar_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_vid_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_viff_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_wbmp_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_wmf_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_wpg_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_xbm_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_xcf_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_xc_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_xpm_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_xps_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_xtrn_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_xwd_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_x_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_ycbcr_.dll" />
+    <Content Include="epub_create\DLLs\IM_MOD_RL_yuv_.dll" />
+    <Content Include="epub_create\DLLs\jpeg.dll" />
+    <Content Include="epub_create\DLLs\libeay32.dll" />
+    <Content Include="epub_create\DLLs\libexpat.dll" />
+    <Content Include="epub_create\DLLs\libpng12.dll" />
+    <Content Include="epub_create\DLLs\libxml2.dll" />
+    <Content Include="epub_create\DLLs\locale.xml" />
+    <Content Include="epub_create\DLLs\log.xml" />
+    <Content Include="epub_create\DLLs\magic.xml" />
+    <Content Include="epub_create\DLLs\mfc90.dll" />
+    <Content Include="epub_create\DLLs\mfc90u.dll" />
+    <Content Include="epub_create\DLLs\mfcm90.dll" />
+    <Content Include="epub_create\DLLs\mfcm90u.dll" />
+    <Content Include="epub_create\DLLs\perfmondata.dll" />
+    <Content Include="epub_create\DLLs\podofo.dll" />
+    <Content Include="epub_create\DLLs\policy.xml" />
+    <Content Include="epub_create\DLLs\py.ico" />
+    <Content Include="epub_create\DLLs\pyc.ico" />
+    <Content Include="epub_create\DLLs\PyISAPI_loader.dll" />
+    <Content Include="epub_create\DLLs\python27.dll" />
+    <Content Include="epub_create\DLLs\pythoncom27.dll" />
+    <Content Include="epub_create\DLLs\pywintypes27.dll" />
+    <Content Include="epub_create\DLLs\QtCore4.dll" />
+    <Content Include="epub_create\DLLs\QtGui4.dll" />
+    <Content Include="epub_create\DLLs\QtNetwork4.dll" />
+    <Content Include="epub_create\DLLs\QtSvg4.dll" />
+    <Content Include="epub_create\DLLs\QtWebKit4.dll" />
+    <Content Include="epub_create\DLLs\QtXml4.dll" />
+    <Content Include="epub_create\DLLs\QtXmlPatterns4.dll" />
+    <Content Include="epub_create\DLLs\scintilla.dll" />
+    <Content Include="epub_create\DLLs\sqlite3.dll" />
+    <Content Include="epub_create\DLLs\ssleay32.dll" />
+    <Content Include="epub_create\DLLs\thresholds.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="epub_create\DLLs\type-ghostscript.xml" />
+    <Content Include="epub_create\DLLs\type.xml" />
+    <Content Include="epub_create\DLLs\unrar.dll" />
+    <Content Include="epub_create\DLLs\zlib1.dll" />
+    <Content Include="epub_create\ebook-convert.exe" />
+    <Content Include="epub_create\ebook-device.exe" />
+    <Content Include="epub_create\ebook-meta.exe" />
+    <Content Include="epub_create\ebook-viewer.exe" />
+    <Content Include="epub_create\epub-fix.exe" />
+    <Content Include="epub_create\fetch-ebook-metadata.exe" />
+    <Content Include="epub_create\Hig.html" />
+    <Content Include="epub_create\highhh.html" />
+    <Content Include="epub_create\lrf2lrs.exe" />
+    <Content Include="epub_create\lrfviewer.exe" />
+    <Content Include="epub_create\lrs2lrf.exe" />
+    <Content Include="epub_create\markdown-calibre.exe" />
+    <Content Include="epub_create\Microsoft.VC90.CRT\msvcm90.dll" />
+    <Content Include="epub_create\Microsoft.VC90.CRT\msvcp90.dll" />
+    <Content Include="epub_create\Microsoft.VC90.CRT\msvcr90.dll" />
+    <Content Include="epub_create\pdfmanipulate.exe" />
+    <Content Include="epub_create\pdftohtml.exe" />
+    <Content Include="epub_create\qt_plugins\codecs\qcncodecs4.dll" />
+    <Content Include="epub_create\qt_plugins\codecs\qjpcodecs4.dll" />
+    <Content Include="epub_create\qt_plugins\codecs\qkrcodecs4.dll" />
+    <Content Include="epub_create\qt_plugins\codecs\qtwcodecs4.dll" />
+    <Content Include="epub_create\qt_plugins\iconengines\qsvgicon4.dll" />
+    <Content Include="epub_create\qt_plugins\imageformats\qgif4.dll" />
+    <Content Include="epub_create\qt_plugins\imageformats\qico4.dll" />
+    <Content Include="epub_create\qt_plugins\imageformats\qjpeg4.dll" />
+    <Content Include="epub_create\qt_plugins\imageformats\qmng4.dll" />
+    <Content Include="epub_create\qt_plugins\imageformats\qsvg4.dll" />
+    <Content Include="epub_create\qt_plugins\imageformats\qtiff4.dll" />
+    <Content Include="epub_create\resources\builtin_recipes.xml" />
+    <Content Include="epub_create\resources\catalog\DefaultCover.jpg" />
+    <Content Include="epub_create\resources\catalog\mastheadImage.gif" />
+    <Content Include="epub_create\resources\catalog\stylesheet.css" />
+    <Content Include="epub_create\resources\content_server\av.jpg" />
+    <Content Include="epub_create\resources\content_server\bg_search_box.png" />
+    <Content Include="epub_create\resources\content_server\browse\browse.css" />
+    <Content Include="epub_create\resources\content_server\browse\browse.html" />
+    <Content Include="epub_create\resources\content_server\browse\browse.js" />
+    <Content Include="epub_create\resources\content_server\browse\details.html" />
+    <Content Include="epub_create\resources\content_server\browse\summary.html" />
+    <Content Include="epub_create\resources\content_server\btn_search_box.png" />
+    <Content Include="epub_create\resources\content_server\button-donate.png" />
+    <Content Include="epub_create\resources\content_server\calibre.png" />
+    <Content Include="epub_create\resources\content_server\calibre_banner.png" />
+    <Content Include="epub_create\resources\content_server\date.js" />
+    <Content Include="epub_create\resources\content_server\default_cover.jpg" />
+    <Content Include="epub_create\resources\content_server\first.png" />
+    <Content Include="epub_create\resources\content_server\gui.css" />
+    <Content Include="epub_create\resources\content_server\gui.js" />
+    <Content Include="epub_create\resources\content_server\index.html" />
+    <Content Include="epub_create\resources\content_server\jquery.corner.js" />
+    <Content Include="epub_create\resources\content_server\jquery.js" />
+    <Content Include="epub_create\resources\content_server\jquery.multiselect.css" />
+    <Content Include="epub_create\resources\content_server\jquery.multiselect.min.js" />
+    <Content Include="epub_create\resources\content_server\jquery_ui\css\humanity-custom\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="epub_create\resources\content_server\jquery_ui\css\humanity-custom\images\ui-bg_glass_100_f5f0e5_1x400.png" />
+    <Content Include="epub_create\resources\content_server\jquery_ui\css\humanity-custom\images\ui-bg_glass_25_cb842e_1x400.png" />
+    <Content Include="epub_create\resources\content_server\jquery_ui\css\humanity-custom\images\ui-bg_glass_70_ede4d4_1x400.png" />
+    <Content Include="epub_create\resources\content_server\jquery_ui\css\humanity-custom\images\ui-bg_highlight-hard_100_f4f0ec_1x100.png" />
+    <Content Include="epub_create\resources\content_server\jquery_ui\css\humanity-custom\images\ui-bg_highlight-hard_65_fee4bd_1x100.png" />
+    <Content Include="epub_create\resources\content_server\jquery_ui\css\humanity-custom\images\ui-bg_highlight-hard_75_f5f5b5_1x100.png" />
+    <Content Include="epub_create\resources\content_server\jquery_ui\css\humanity-custom\images\ui-bg_inset-soft_100_f4f0ec_1x100.png" />
+    <Content Include="epub_create\resources\content_server\jquery_ui\css\humanity-custom\images\ui-icons_c47a23_256x240.png" />
+    <Content Include="epub_create\resources\content_server\jquery_ui\css\humanity-custom\images\ui-icons_cb672b_256x240.png" />
+    <Content Include="epub_create\resources\content_server\jquery_ui\css\humanity-custom\images\ui-icons_f08000_256x240.png" />
+    <Content Include="epub_create\resources\content_server\jquery_ui\css\humanity-custom\images\ui-icons_f35f07_256x240.png" />
+    <Content Include="epub_create\resources\content_server\jquery_ui\css\humanity-custom\images\ui-icons_ff7519_256x240.png" />
+    <Content Include="epub_create\resources\content_server\jquery_ui\css\humanity-custom\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="epub_create\resources\content_server\jquery_ui\css\humanity-custom\jquery-ui-1.8.5.custom.css" />
+    <Content Include="epub_create\resources\content_server\jquery_ui\js\jquery-ui-1.8.5.custom.min.js" />
+    <Content Include="epub_create\resources\content_server\last.png" />
+    <Content Include="epub_create\resources\content_server\loading.gif" />
+    <Content Include="epub_create\resources\content_server\logo.png" />
+    <Content Include="epub_create\resources\content_server\mobile.css" />
+    <Content Include="epub_create\resources\content_server\next.png" />
+    <Content Include="epub_create\resources\content_server\previous.png" />
+    <Content Include="epub_create\resources\content_server\read\monocle.js" />
+    <Content Include="epub_create\resources\content_server\stacktrace.js" />
+    <Content Include="epub_create\resources\content_server\star-half.png" />
+    <Content Include="epub_create\resources\content_server\star-off.png" />
+    <Content Include="epub_create\resources\content_server\star-on.png" />
+    <Content Include="epub_create\resources\display\cfi.js" />
+    <Content Include="epub_create\resources\images\add_book.png" />
+    <Content Include="epub_create\resources\images\arrow-down.png" />
+    <Content Include="epub_create\resources\images\arrow-up.png" />
+    <Content Include="epub_create\resources\images\auto_author_sort.png" />
+    <Content Include="epub_create\resources\images\back.png" />
+    <Content Include="epub_create\resources\images\blank.png" />
+    <Content Include="epub_create\resources\images\book.png" />
+    <Content Include="epub_create\resources\images\bookmarks.png" />
+    <Content Include="epub_create\resources\images\books_in_series.png" />
+    <Content Include="epub_create\resources\images\catalog.png" />
+    <Content Include="epub_create\resources\images\chapters.png" />
+    <Content Include="epub_create\resources\images\clear_left.png" />
+    <Content Include="epub_create\resources\images\column.png" />
+    <Content Include="epub_create\resources\images\config.png" />
+    <Content Include="epub_create\resources\images\connect_share.png" />
+    <Content Include="epub_create\resources\images\connect_share_on.png" />
+    <Content Include="epub_create\resources\images\console.png" />
+    <Content Include="epub_create\resources\images\convert.png" />
+    <Content Include="epub_create\resources\images\cover_flow.png" />
+    <Content Include="epub_create\resources\images\debug.png" />
+    <Content Include="epub_create\resources\images\default_cover.png" />
+    <Content Include="epub_create\resources\images\devices\bambook.png" />
+    <Content Include="epub_create\resources\images\devices\boox.jpg" />
+    <Content Include="epub_create\resources\images\devices\folder.png" />
+    <Content Include="epub_create\resources\images\devices\ipad.png" />
+    <Content Include="epub_create\resources\images\devices\italica.png" />
+    <Content Include="epub_create\resources\images\devices\itunes.png" />
+    <Content Include="epub_create\resources\images\devices\kindle.jpg" />
+    <Content Include="epub_create\resources\images\devices\nook.jpg" />
+    <Content Include="epub_create\resources\images\dialog_error.png" />
+    <Content Include="epub_create\resources\images\dialog_information.png" />
+    <Content Include="epub_create\resources\images\dialog_question.png" />
+    <Content Include="epub_create\resources\images\dialog_warning.png" />
+    <Content Include="epub_create\resources\images\dictionary.png" />
+    <Content Include="epub_create\resources\images\document-encrypt.png" />
+    <Content Include="epub_create\resources\images\document_open.png" />
+    <Content Include="epub_create\resources\images\donate.png" />
+    <Content Include="epub_create\resources\images\drawer.png" />
+    <Content Include="epub_create\resources\images\drm-locked.png" />
+    <Content Include="epub_create\resources\images\drm-unlocked.png" />
+    <Content Include="epub_create\resources\images\edit-clear.png" />
+    <Content Include="epub_create\resources\images\edit-copy.png" />
+    <Content Include="epub_create\resources\images\edit-cut.png" />
+    <Content Include="epub_create\resources\images\edit-paste.png" />
+    <Content Include="epub_create\resources\images\edit-redo.png" />
+    <Content Include="epub_create\resources\images\edit-select-all.png" />
+    <Content Include="epub_create\resources\images\edit-undo.png" />
+    <Content Include="epub_create\resources\images\edit_input.png" />
+    <Content Include="epub_create\resources\images\eject.png" />
+    <Content Include="epub_create\resources\images\exec.png" />
+    <Content Include="epub_create\resources\images\font_size_larger.png" />
+    <Content Include="epub_create\resources\images\font_size_smaller.png" />
+    <Content Include="epub_create\resources\images\format-fill-color.png" />
+    <Content Include="epub_create\resources\images\format-indent-less.png" />
+    <Content Include="epub_create\resources\images\format-indent-more.png" />
+    <Content Include="epub_create\resources\images\format-justify-center.png" />
+    <Content Include="epub_create\resources\images\format-justify-fill.png" />
+    <Content Include="epub_create\resources\images\format-justify-left.png" />
+    <Content Include="epub_create\resources\images\format-justify-right.png" />
+    <Content Include="epub_create\resources\images\format-list-ordered.png" />
+    <Content Include="epub_create\resources\images\format-list-unordered.png" />
+    <Content Include="epub_create\resources\images\format-text-bold.png" />
+    <Content Include="epub_create\resources\images\format-text-color.png" />
+    <Content Include="epub_create\resources\images\format-text-heading.png" />
+    <Content Include="epub_create\resources\images\format-text-italic.png" />
+    <Content Include="epub_create\resources\images\format-text-strikethrough.png" />
+    <Content Include="epub_create\resources\images\format-text-subscript.png" />
+    <Content Include="epub_create\resources\images\format-text-superscript.png" />
+    <Content Include="epub_create\resources\images\format-text-underline.png" />
+    <Content Include="epub_create\resources\images\forward.png" />
+    <Content Include="epub_create\resources\images\gmail_logo.png" />
+    <Content Include="epub_create\resources\images\help.png" />
+    <Content Include="epub_create\resources\images\heuristics.png" />
+    <Content Include="epub_create\resources\images\highlight_only_off.png" />
+    <Content Include="epub_create\resources\images\highlight_only_on.png" />
+    <Content Include="epub_create\resources\images\hotmail.png" />
+    <Content Include="epub_create\resources\images\identifiers.png" />
+    <Content Include="epub_create\resources\images\insert-link.png" />
+    <Content Include="epub_create\resources\images\jobs.png" />
+    <Content Include="epub_create\resources\images\keyboard-prefs.png" />
+    <Content Include="epub_create\resources\images\languages.png" />
+    <Content Include="epub_create\resources\images\library.png" />
+    <Content Include="epub_create\resources\images\list_remove.png" />
+    <Content Include="epub_create\resources\images\lookfeel.png" />
+    <Content Include="epub_create\resources\images\lt.png" />
+    <Content Include="epub_create\resources\images\mail.png" />
+    <Content Include="epub_create\resources\images\merge_books.png" />
+    <Content Include="epub_create\resources\images\metadata.png" />
+    <Content Include="epub_create\resources\images\mimetypes\bmp.png" />
+    <Content Include="epub_create\resources\images\mimetypes\computer.png" />
+    <Content Include="epub_create\resources\images\mimetypes\dir.png" />
+    <Content Include="epub_create\resources\images\mimetypes\djvu.png" />
+    <Content Include="epub_create\resources\images\mimetypes\epub.png" />
+    <Content Include="epub_create\resources\images\mimetypes\fb2.png" />
+    <Content Include="epub_create\resources\images\mimetypes\gif.png" />
+    <Content Include="epub_create\resources\images\mimetypes\html.png" />
+    <Content Include="epub_create\resources\images\mimetypes\jpeg.png" />
+    <Content Include="epub_create\resources\images\mimetypes\lit.png" />
+    <Content Include="epub_create\resources\images\mimetypes\lrf.png" />
+    <Content Include="epub_create\resources\images\mimetypes\lrx.png" />
+    <Content Include="epub_create\resources\images\mimetypes\mobi.png" />
+    <Content Include="epub_create\resources\images\mimetypes\odt.png" />
+    <Content Include="epub_create\resources\images\mimetypes\pdf.png" />
+    <Content Include="epub_create\resources\images\mimetypes\png.png" />
+    <Content Include="epub_create\resources\images\mimetypes\rar.png" />
+    <Content Include="epub_create\resources\images\mimetypes\rtf.png" />
+    <Content Include="epub_create\resources\images\mimetypes\snb.png" />
+    <Content Include="epub_create\resources\images\mimetypes\svg.png" />
+    <Content Include="epub_create\resources\images\mimetypes\txt.png" />
+    <Content Include="epub_create\resources\images\mimetypes\unknown.png" />
+    <Content Include="epub_create\resources\images\mimetypes\xps.png" />
+    <Content Include="epub_create\resources\images\mimetypes\zero.png" />
+    <Content Include="epub_create\resources\images\mimetypes\zip.png" />
+    <Content Include="epub_create\resources\images\minus.png" />
+    <Content Include="epub_create\resources\images\minusminus.png" />
+    <Content Include="epub_create\resources\images\network-server.png" />
+    <Content Include="epub_create\resources\images\news.png" />
+    <Content Include="epub_create\resources\images\next.png" />
+    <Content Include="epub_create\resources\images\notify.png" />
+    <Content Include="epub_create\resources\images\ok.png" />
+    <Content Include="epub_create\resources\images\page.png" />
+    <Content Include="epub_create\resources\images\plugboard.png" />
+    <Content Include="epub_create\resources\images\plugins.png" />
+    <Content Include="epub_create\resources\images\plugins\mobileread.png" />
+    <Content Include="epub_create\resources\images\plugins\plugin_deprecated.png" />
+    <Content Include="epub_create\resources\images\plugins\plugin_disabled_invalid.png" />
+    <Content Include="epub_create\resources\images\plugins\plugin_disabled_ok.png" />
+    <Content Include="epub_create\resources\images\plugins\plugin_disabled_valid.png" />
+    <Content Include="epub_create\resources\images\plugins\plugin_new.png" />
+    <Content Include="epub_create\resources\images\plugins\plugin_new_invalid.png" />
+    <Content Include="epub_create\resources\images\plugins\plugin_new_valid.png" />
+    <Content Include="epub_create\resources\images\plugins\plugin_updater.png" />
+    <Content Include="epub_create\resources\images\plugins\plugin_updater_updates.png" />
+    <Content Include="epub_create\resources\images\plugins\plugin_upgrade_invalid.png" />
+    <Content Include="epub_create\resources\images\plugins\plugin_upgrade_ok.png" />
+    <Content Include="epub_create\resources\images\plugins\plugin_upgrade_valid.png" />
+    <Content Include="epub_create\resources\images\plus.png" />
+    <Content Include="epub_create\resources\images\plusplus.png" />
+    <Content Include="epub_create\resources\images\previous.png" />
+    <Content Include="epub_create\resources\images\print-preview.png" />
+    <Content Include="epub_create\resources\images\print.png" />
+    <Content Include="epub_create\resources\images\publisher.png" />
+    <Content Include="epub_create\resources\images\random.png" />
+    <Content Include="epub_create\resources\images\rating.png" />
+    <Content Include="epub_create\resources\images\reader.png" />
+    <Content Include="epub_create\resources\images\save.png" />
+    <Content Include="epub_create\resources\images\scheduler.png" />
+    <Content Include="epub_create\resources\images\sd.png" />
+    <Content Include="epub_create\resources\images\search.png" />
+    <Content Include="epub_create\resources\images\search_add_saved.png" />
+    <Content Include="epub_create\resources\images\search_copy_saved.png" />
+    <Content Include="epub_create\resources\images\search_delete_saved.png" />
+    <Content Include="epub_create\resources\images\series.png" />
+    <Content Include="epub_create\resources\images\store.png" />
+    <Content Include="epub_create\resources\images\swap.png" />
+    <Content Include="epub_create\resources\images\sync.png" />
+    <Content Include="epub_create\resources\images\tags.png" />
+    <Content Include="epub_create\resources\images\tb_folder.png" />
+    <Content Include="epub_create\resources\images\template_funcs.png" />
+    <Content Include="epub_create\resources\images\trash.png" />
+    <Content Include="epub_create\resources\images\trim.png" />
+    <Content Include="epub_create\resources\images\user_profile.png" />
+    <Content Include="epub_create\resources\images\view.png" />
+    <Content Include="epub_create\resources\images\viewer.png" />
+    <Content Include="epub_create\resources\images\welcome_wizard.png" />
+    <Content Include="epub_create\resources\images\window-close.png" />
+    <Content Include="epub_create\resources\images\wizard.png" />
+    <Content Include="epub_create\resources\jacket\stylesheet.css" />
+    <Content Include="epub_create\resources\jquery.simulate.js" />
+    <Content Include="epub_create\resources\metadata_sqlite.sql" />
+    <Content Include="epub_create\resources\templates\book_details.css" />
+    <Content Include="epub_create\resources\templates\fb2.xsl" />
+    <Content Include="epub_create\resources\templates\html.css" />
+    <Content Include="epub_create\resources\templates\html_export_default.css" />
+    <Content Include="epub_create\resources\templates\lrf.xsl" />
+    <Content Include="epub_create\resources\templates\rtf.xsl" />
+    <Content Include="epub_create\resources\viewer\bookmarks.js" />
+    <Content Include="epub_create\resources\viewer\hyphenate\Hyphenator.js" />
+    <Content Include="epub_create\resources\viewer\hyphenation.js" />
+    <Content Include="epub_create\resources\viewer\images.js" />
+    <Content Include="epub_create\resources\viewer\jquery_scrollTo.js" />
+    <Content Include="epub_create\resources\viewer\referencing.js" />
+    <Content Include="epub_create\to\High.html" />
+    <Content Include="epub_create\to\stylesheet.css" />
+    <Content Include="epub_create\web2disk.exe" />
+    <Content Include="index.aspx" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery-1.6.4-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.6.4.js" />
+    <Content Include="Scripts\jquery-1.6.4.min.js" />
+    <Content Include="Scripts\jquery.mobile-1.0.1.js" />
+    <Content Include="Scripts\jquery.mobile-1.0.1.min.js" />
+    <Content Include="T&amp;C.htm" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="HighligtsAll.aspx" />
+    <Content Include="WebForm2.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="HighligtsAll.aspx.cs">
+      <DependentUpon>HighligtsAll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HighligtsAll.aspx.designer.cs">
+      <DependentUpon>HighligtsAll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="record.cs" />
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="output\" />
+    <Folder Include="tempdir\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\images\Thumbs.db" />
+    <None Include="epub_create\fontconfig\conf.avail\10-autohint.conf" />
+    <None Include="epub_create\fontconfig\conf.avail\10-no-sub-pixel.conf" />
+    <None Include="epub_create\fontconfig\conf.avail\10-sub-pixel-bgr.conf" />
+    <None Include="epub_create\fontconfig\conf.avail\10-sub-pixel-rgb.conf" />
+    <None Include="epub_create\fontconfig\conf.avail\10-sub-pixel-vbgr.conf" />
+    <None Include="epub_create\fontconfig\conf.avail\10-sub-pixel-vrgb.conf" />
+    <None Include="epub_create\fontconfig\conf.avail\10-unhinted.conf" />
+    <None Include="epub_create\fontconfig\conf.avail\20-fix-globaladvance.conf" />
+    <None Include="epub_create\fontconfig\conf.avail\20-lohit-gujarati.conf" />
+    <None Include="epub_create\fontconfig\conf.avail\20-unhint-small-vera.conf" />
+    <None Include="epub_create\fontconfig\conf.avail\30-amt-aliases.conf" />
+    <None Include="epub_create\fontconfig\conf.avail\30-urw-aliases.conf" />
+    <None Include="epub_create\fontconfig\conf.avail\40-generic.conf" />
+    <None Include="epub_create\fontconfig\conf.avail\49-sansserif.conf" />
+    <None Include="epub_create\fontconfig\conf.avail\50-user.conf" />
+    <None Include="epub_create\fontconfig\conf.avail\51-local.conf" />
+    <None Include="epub_create\fontconfig\conf.avail\60-latin.conf" />
+    <None Include="epub_create\fontconfig\conf.avail\65-fonts-persian.conf" />
+    <None Include="epub_create\fontconfig\conf.avail\65-nonlatin.conf" />
+    <None Include="epub_create\fontconfig\conf.avail\69-unifont.conf" />
+    <None Include="epub_create\fontconfig\conf.avail\70-no-bitmaps.conf" />
+    <None Include="epub_create\fontconfig\conf.avail\70-yes-bitmaps.conf" />
+    <None Include="epub_create\fontconfig\conf.avail\80-delicious.conf" />
+    <None Include="epub_create\fontconfig\conf.avail\90-synthetic.conf" />
+    <None Include="epub_create\fontconfig\conf.avail\README" />
+    <None Include="epub_create\fontconfig\conf.d\10-autohint.conf" />
+    <None Include="epub_create\fontconfig\conf.d\10-no-sub-pixel.conf" />
+    <None Include="epub_create\fontconfig\conf.d\10-sub-pixel-bgr.conf" />
+    <None Include="epub_create\fontconfig\conf.d\10-sub-pixel-rgb.conf" />
+    <None Include="epub_create\fontconfig\conf.d\10-sub-pixel-vbgr.conf" />
+    <None Include="epub_create\fontconfig\conf.d\10-sub-pixel-vrgb.conf" />
+    <None Include="epub_create\fontconfig\conf.d\10-unhinted.conf" />
+    <None Include="epub_create\fontconfig\conf.d\20-fix-globaladvance.conf" />
+    <None Include="epub_create\fontconfig\conf.d\20-lohit-gujarati.conf" />
+    <None Include="epub_create\fontconfig\conf.d\20-unhint-small-vera.conf" />
+    <None Include="epub_create\fontconfig\conf.d\30-amt-aliases.conf" />
+    <None Include="epub_create\fontconfig\conf.d\30-urw-aliases.conf" />
+    <None Include="epub_create\fontconfig\conf.d\40-generic.conf" />
+    <None Include="epub_create\fontconfig\conf.d\49-sansserif.conf" />
+    <None Include="epub_create\fontconfig\conf.d\50-user.conf" />
+    <None Include="epub_create\fontconfig\conf.d\51-local.conf" />
+    <None Include="epub_create\fontconfig\conf.d\60-latin.conf" />
+    <None Include="epub_create\fontconfig\conf.d\65-fonts-persian.conf" />
+    <None Include="epub_create\fontconfig\conf.d\65-nonlatin.conf" />
+    <None Include="epub_create\fontconfig\conf.d\69-unifont.conf" />
+    <None Include="epub_create\fontconfig\conf.d\70-no-bitmaps.conf" />
+    <None Include="epub_create\fontconfig\conf.d\70-yes-bitmaps.conf" />
+    <None Include="epub_create\fontconfig\conf.d\80-delicious.conf" />
+    <None Include="epub_create\fontconfig\conf.d\90-synthetic.conf" />
+    <None Include="epub_create\fontconfig\conf.d\README" />
+    <None Include="epub_create\fontconfig\fonts.conf" />
+    <None Include="epub_create\high.epub" />
+    <None Include="epub_create\LICENSE" />
+    <None Include="epub_create\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
+    <None Include="epub_create\plugins2\sqlite_custom.pyd" />
+    <Content Include="epub_create\pylib.zip" />
+    <Content Include="epub_create\resources\builtin_recipes.zip" />
+    <None Include="epub_create\resources\calibre-portable.bat" />
+    <None Include="epub_create\resources\catalog\section_list_templates.py" />
+    <None Include="epub_create\resources\catalog\template.xhtml" />
+    <None Include="epub_create\resources\default_tweaks.py" />
+    <None Include="epub_create\resources\ebook-convert-complete.pickle" />
+    <None Include="epub_create\resources\fonts\liberation\LiberationMono-Bold.ttf" />
+    <None Include="epub_create\resources\fonts\liberation\LiberationMono-BoldItalic.ttf" />
+    <None Include="epub_create\resources\fonts\liberation\LiberationMono-Italic.ttf" />
+    <None Include="epub_create\resources\fonts\liberation\LiberationMono-Regular.ttf" />
+    <None Include="epub_create\resources\fonts\liberation\LiberationSans-Bold.ttf" />
+    <None Include="epub_create\resources\fonts\liberation\LiberationSans-BoldItalic.ttf" />
+    <None Include="epub_create\resources\fonts\liberation\LiberationSans-Italic.ttf" />
+    <None Include="epub_create\resources\fonts\liberation\LiberationSans-Regular.ttf" />
+    <None Include="epub_create\resources\fonts\liberation\LiberationSerif-Bold.ttf" />
+    <None Include="epub_create\resources\fonts\liberation\LiberationSerif-BoldItalic.ttf" />
+    <None Include="epub_create\resources\fonts\liberation\LiberationSerif-Italic.ttf" />
+    <None Include="epub_create\resources\fonts\liberation\LiberationSerif-Regular.ttf" />
+    <None Include="epub_create\resources\fonts\prs500\tt0003m_.ttf" />
+    <None Include="epub_create\resources\fonts\prs500\tt0011m_.ttf" />
+    <None Include="epub_create\resources\fonts\prs500\tt0419m_.ttf" />
+    <None Include="epub_create\resources\images.qrc" />
+    <None Include="epub_create\resources\jacket\template.xhtml" />
+    <None Include="epub_create\resources\localization\iso639.pickle" />
+    <Content Include="epub_create\resources\localization\locales.zip" />
+    <None Include="epub_create\resources\localization\pykakasi\itaijidict2.pickle" />
+    <None Include="epub_create\resources\localization\pykakasi\kanadict2.pickle" />
+    <None Include="epub_create\resources\localization\pykakasi\kanwadict2.pickle" />
+    <None Include="epub_create\resources\localization\stats.pickle" />
+    <None Include="epub_create\resources\mime.types" />
+    <None Include="epub_create\resources\quick_start.epub" />
+    <None Include="epub_create\resources\scripts.pickle" />
+    <None Include="epub_create\resources\template-functions.json" />
+    <None Include="epub_create\resources\templates\html_export_default.tmpl" />
+    <None Include="epub_create\resources\templates\html_export_default_index.tmpl" />
+    <None Include="epub_create\resources\tracer.epub" />
+    <Content Include="epub_create\resources\viewer\hyphenate\patterns.zip" />
+    <None Include="epub_create\to\content.opf" />
+    <None Include="epub_create\to\toc.ncx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54605</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
